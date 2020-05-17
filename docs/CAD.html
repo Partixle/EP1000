@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title> My First Webpage </title>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+    </head>
+
+    <body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Computer Aided Design </h1>
+            </div>
+
+            <div id = "content">
+                <div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a class = "selected" href = "CAD.html"> CAD</a></li>
+                    </ul>
+                </div>
+
+		<div id = "main">
+            <p>CAD or CADD (Computer Aided Design and Drafing) are a set of digital vector tools used to design objects on your computer and simulate and analyse them without actually building or fabricating the actual object. Once designed and tested, they can then be fabricated by sending the design into a 3D printers or computer cutting. CAD is often used in Electronic Design Automation, Architectural &amp; Building services as well as Product design &amp; manufacturing </p>
+            
+            <h3>Autodesk Fusion 360</h3>
+            <p> For CAD, I used Fusion 360 which is an Integrated CAD, CAM, and CAE software. The commands of the app is similar to Autodesk Inventor which I learnt in the module Computer Aided Design. My first project with Fusion 360 is to design a nametag. </p>
+            <ol>
+                <li>I created a sketch, which is a 2 dimensional model of the nametag, and used a rectangle, an arc and a circle to create the shape of the nametag. </li>
+                <li>I included the relevant dimensions of the nametag before using the command Extrude to turn the sketch into a 3 dimensional body by creating a height to the nametag. I extruded the edge by main body by 2mm, and the edge by 3mm. </li>
+                <li>I created a hole for the key ring of diameter 2.5mm. </li>
+                <li>I created another sketch to put my name in using the Create Text function before extruding it by 1mm. </li>
+                <li>I rounded off the corners using the Fillet command by 2mm for the outer corner, and 1mm for the inner corner. </li>
+            </ol>
+            <p class = "comment">The Finished Product</p><img src = "../photos/Nametag.png" height = "300px">
+            
+            <p> For the next project, I designed a fidget spinner that would house a ABEC 608 Bearing and 3 M8 stainless steel hex nuts. </p>
+            <ol>
+                <li> I started off with a sketch with a circle of diamter 40mm as a limit to how big the fidget spinner is, before designing one arm of the fidget spinner using a hexagon to house the nut, a circle for the centre, and 2 lines tangent to the circle for the arm. </li>
+                <li> I then extruded one arm by 8mm</li>
+                <li> I used Pattern - Circular to duplicate the arm 2 more times around an the Z-axis. </li>
+                <li> Lastly, I used a fillet of 12mm between the 3 arms and a champfer of 0.5mm at the corners. </li>
+            </ol>
+            <p class = "comment">The Finished Product</p><img src = "../photos/Fidget%20Spinner.png" height = "300px">
+		</div>
+            </div>
+
+            <div id = "footer">
+                <p> Copyright © Emmanuel Cheng </p>
+            </div>
+        </div>
+    </body>
+</html>
