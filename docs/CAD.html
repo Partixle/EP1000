@@ -7,7 +7,7 @@
     <body>
         <div id = "container">
             <div id = "header">
-                <h1> Computer Aided Design </h1>
+                <h1> My Website </h1>
             </div>
 
             <div id = "content">
@@ -21,41 +21,62 @@
                         <li> <a href = "git.html"> Using Git</a></li>
                         <li> <a href = "gimp.html"> Computer Graphics</a></li>
                         <li> <a class = "selected" href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
                     </ul>
                 </div>
-
-		<div id = "main">
-            <p>CAD or CADD (Computer Aided Design and Drafing) are a set of digital vector tools used to design objects on your computer and simulate and analyse them without actually building or fabricating the actual object. Once designed and tested, they can then be fabricated by sending the design into a 3D printers or computer cutting. CAD is often used in Electronic Design Automation, Architectural &amp; Building services as well as Product design &amp; manufacturing </p>
-            
-            <h3>Autodesk Fusion 360</h3>
-            <p> For CAD, I used Fusion 360 which is an Integrated CAD, CAM, and CAE software. The commands of the app is similar to Autodesk Inventor which I learnt in the module Computer Aided Design. My first project with Fusion 360 is to design a nametag. </p>
-            <ol>
-                <li>Created a sketch, which is a 2 dimensional model of the nametag, and used a rectangle, an arc and a circle to create the shape of the nametag. </li>
-                <img src = "../photos/nt%20sketch%201.jpg" width = "500" />
-                <li>Included the relevant dimensions of the nametag before using the command Extrude to turn the sketch into a 3 dimensional body by creating a height to the nametag. I extruded the edge by main body by 2mm, and the edge by 3mm. </li>
-                <li>Created a hole for the key ring of diameter 2.5mm. </li>
-                <li>Created another sketch to put my name in using the Create Text function to put my name before extruding it by 1mm. </li>
-                <img src = "../photos/nt%20sketch%202.jpg" width = "500" />
-                <li>Rounded off the corners using the Fillet command by 2mm for the outer corner, and 1mm for the inner corner. </li>
-            </ol>
-            <p class = "comment">The Finished Product</p><img src = "../photos/Nametag.png" height = "300px">
-            
-            <p> For the next project, I designed a fidget spinner that would house a ABEC 608 Bearing and 3 M8 stainless steel hex nuts. </p>
-            <ol>
-                <li> Started with a sketch with a circle of diameter 40mm as a limit to how big the fidget spinner is, before designing one arm of the fidget spinner using a hexagon to house the nut, a circle for the centre, and 2 lines tangent to the circle for the arm. </li>
-                <img src = "../photos/fs%20sketch%201.png" width = "500" />
-                <li> Extruded one arm by 8mm</li>
-                <li> Created a groove for aesthetics and fillet the inner radius. </li>
-                <img src = "../photos/fs%20sketch%203.jpg" width = "500" />
-                <li> Created another sketch for a taper in the arm and revolve cut the arm about the Z axie</li>
-                <img src = "../photos/fs%20sketch%202.png" width = "500" />
-                <img src = "../photos/revolve.jpg" width = "500" />
-                <li> Used Pattern - Circular to duplicate the arm 2 more times around an the Z-axis and combined the 3 different arms together as one body </li>
-                <li> Fillet of 12mm between the 3 arms. </li>
-            </ol>
-            <p class = "comment">The Finished Product</p><img src = "../photos/spinner.png" height = "300px">
-            <input type = "f3d" name = "../fusion/Final%20Fidget%20Spinner" />
-		</div>
+                
+                <div id = "main">
+                    <p>CAD or CADD (Computer Aided Design and Drafing) are a set of digital vector tools used to design objects on your computer and simulate and analyse them without actually building or fabricating the actual object. Once designed and tested, they can then be fabricated by sending the design into a 3D printers or computer cutting. CAD is often used in Electronic Design Automation, Architectural &amp; Building services as well as Product design &amp; manufacturing </p>
+                    <p> For CAD, I used Fusion 360 which is an Integrated CAD, CAM, and CAE software. The commands of the app is similar to Autodesk Inventor which I learnt in the module Computer Aided Design. </p>
+                    
+                    <h3>The Basics</h3>
+                    <p> In Fusion, to move the camera around, hold the MMB to shift the camera, and hold MMB+Shift to pan the camera. To start modeling in Fusion 360, a 2D Sketch must first be constructed on one of the 3 provided planes. </p>
+                    <a href = "../photos/cad/planes.jpg" target="_blank"> <img src = "../photos/cad/planes.jpg" width = "300"/></a>
+                    <p> You then can construct a 2D view of what your object would look like, and give relevant dimensions</p>
+                    <a href = "../photos/cad/sketch.jpg" target="_blank"> <img src = "../photos/cad/sketch.jpg" width = "300"/></a>
+                    <p> After creating the sketch, you can choose to extrude it to create a 3 Dimensional object. There are 3 types of extrusion: <br/> New Body - creates a new body<br/> Join - joins extruded body with the existing body <br/> Cut - uses the extrusion to remove unwanted parts</p>
+                    <a href = "../photos/cad/extrude.jpg" target="_blank"> <img src = "../photos/cad/extrude.jpg" width = "400"/></a>
+                    <p> You can also choose to Revolve instead of extruding, which requries you to select an axis to revolve the sketch around. Revolution can be Partial, based on angle (which I used with an angle of 135 degrees), or a Full 360</p>
+                    <a href = "../photos/cad/revolve.jpg" target="_blank"> <img src = "../photos/cad/revolve.jpg" width = "400"/></a>
+                    <hr/>
+                    <h3>Lofting</h3>
+                    <p>Lofting creates a closed profile using several sketches made in differet planes. </p>
+                    <img src = "../photos/cad/loft_sketch.jpg" height = "250" />
+                    <p>When using the loft command, select the profiles you want to use to create the 3D body. </p>
+                    <img src = "../photos/cad/loft.jpg" height="250" />
+                    <hr/>
+                    <h3>Create</h3>
+                    <p>If our model is geometric (made up of a certain shape) we can directly create the object using Box, Cylinder, Sphere, Torus, Coil and Pipe. These models can be mathematically defined, hence, easy to create using Fusion 360. We could use these and duplicate and manipulate them to our purpose. Fusion 360 provides commands for this action </p>
+                    <ul>
+                        <li>Pattern: Circular - Duplicate an object around an axis, Rectangualar - Duplicate an object following a rectangular rule</li>
+                        <li>Mirror: Mirror bodies and features for symmetrical objects about a plane. </li>
+                        <li>Thicken: Add thickness to object, creating models from surfaces</li>
+                        <li>Boundary Fill - fills in bound areas</li>
+                    </ul>
+                    <p> These actions can apply to Faces, Bodies, Components or Features that were constructed by sketches as well.</p>
+                    <hr/>
+                    <h3>Modify</h3>
+                    <p>  Modification commands changes the composition of faces, bodies or components.</p>
+                    <ul>
+                        <li>Press Pull: Similar to extrude however, it can apply to a single face or faces, producing different results</li>
+                        <li>Fillet: Round of a corner by a certain radius </li>
+                        <li>Chamfer: Smooth down a surface using a bevel</li>
+                        <li>Shell: Hollow a body, leaving one of the sides intact</li>
+                        <li>Scale: Modify an object by changing the size based on a ratio</li>
+                        <li>Combine: Combine 2 components in different ways either by merging, cutting or removing</li>
+                        <li>Move/Copy: Move or copy a 3D object</li>
+                    </ul>
+                    <hr/>
+                    <h3>Canvas</h3>
+                    <p>Fusion allows importing of images in order to help create a model based on the shape in the image. This can be done by Insert > Canvas. From there, you can choose the image from your computer, and select the plane you would want to project the image. Fusion would also allow you to change the opacity of the image and the size of the image. </p>
+                    <hr/>
+                    <h3>Parametric Modelling</h3>
+                    <p>Parametric modelling is a function in Fusion which allows you to define dimensions in the model by variables and functions. These variables are defined in the Modify > Change Parameters. In the parameters box you define the name of the parameter, the type of the parameter e.g. mm, a value (which can be changed) and a comment to identify the parameter created. To use the variables, when typing out a dimensions, you can refer the selected dimension to the variable using the variable name. The variable can also be manipulated with mathematical equations, such as the variable/2 to divide the value of the variable by 2. </p>
+                    <hr/>
+                    <h3>Assembly Modelling</h3>
+                    <p>You can combine bodies or components to form a new object. This allows you to create smaller parts (components) and then assemble them to form another object or component for further assemblies. Assembly modelling allows you to check your model before manufacture.</p>
+                    <p>Joints allow you to constrain your components through a degree of freedon. After specifying a joint you can check the model with the combination of components. How to start with joints Only components Ground one of the components, others move with-respect-to this anchor point One joint to rule them all, then select the movement </p>
+                </div>
             </div>
 
             <div id = "footer">
@@ -64,3 +85,6 @@
         </div>
     </body>
 </html>
+
+
+

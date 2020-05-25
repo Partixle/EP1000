@@ -60,6 +60,13 @@ p {
     font-family: serif;
 }
 
+img {
+     border: 1px solid black;
+}
+
+img.noborder {
+    border: 0px
+}
 th {
   text-align: left;
     font-weight: normal;

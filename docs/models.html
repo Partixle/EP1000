@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title> My First Webpage </title>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <script type="text/javascript" src="../jsc3d/jsc3d.js"></script>
+        <script type="text/javascript" src="../jsc3d/jsc3d.webgl.js"></script>
+        <script type="text/javascript" src="../jsc3d/jsc3d.touch.js"></script>
+    </head>
+
+    <body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Computer Aided Design </h1>
+            </div>
+
+            <div id = "content">
+                <div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a class = "selected" href = "models.html"> Fusion Models</a></li>
+                    </ul>
+                </div>
+                
+                <div id = "main">
+                    <h3>Nametag</h3>
+                    <ol>
+                        <li>Created a sketch, which is a 2 dimensional model of the nametag, and used a rectangle, an arc and a circle to create the shape  of the nametag. </li>
+                        <a href = "../photos/model/nt_sketch1.jpg" target="_blank"> <img src = "../photos/model/nt_sketch1.jpg" width = "400"/></a>
+                        <li>Included the relevant dimensions of the nametag before using the command Extrude to turn the sketch into a 3 dimensional body by creating a height to the nametag. I extruded the edge by main body by 2mm, and the edge by 3mm. </li>
+                        <li>Created a hole for the key ring of diameter 2.5mm. </li>
+                        <li>Created another sketch to put my name in using the Create Text function to put my name before extruding it by 1mm. </li>
+                        <a href = "../photos/model/nt_sketch2.jpg" target="_blank"> <img src = "../photos/model/nt_sketch2.jpg" width = "400"/></a>
+                        <li>Rounded off the corners using the Fillet command by 2mm for the outer corner, and 1mm for the inner corner. </li>
+                    </ol>
+                    <p class = "comment">The Finished Product</p>
+                        <a href = "../photos/model/Nametag.png" target="_blank"> <img src = "../photos/model/Nametag.png" width = "500"/></a>
+              
+                    <hr/>
+                    <h3> Fidget Spinner</h3>
+                    <p> For the next project, I designed a fidget spinner that would house a ABEC 608 Bearing and 3 M8 stainless steel hex nuts. </p>
+                    <ol>
+                        <li> Started with a sketch with a circle of diameter 40mm as a limit to how big the fidget spinner is, before designing one arm of the fidget spinner using a hexagon to house the nut, a circle for the centre, and 2 lines tangent to the circle for the arm. </li>
+                        <a href = "../photos/model/fs_sketch1.png" target="_blank"> <img src = "../photos/model/fs_sketch1.png" width = "300"/></a>
+                        <li> Extruded one arm by 8mm</li>
+                        <li> Created a groove for aesthetics and fillet the inner radius. </li>
+                        <a href = "../photos/model/fs_sketch2.jpg" target="_blank"> <img src = "../photos/model/fs_sketch2.jpg" width = "200"/></a>
+                        <li> Created another sketch for a taper in the arm and revolve cut the arm about the Z axie</li>
+                        <a href = "../photos/model/fs_sketch3.png" target="_blank"> <img src = "../photos/model/fs_sketch3.png" height = "100"/></a>
+                        <a href = "../photos/model/revolve.jpg" target="_blank"> <img src = "../photos/model/revolve.jpg" height = "100"/></a>
+                        <li> Used Pattern - Circular to duplicate the arm 2 more times around an the Z-axis and combined the 3 different arms together as one body </li>
+                        <li> Fillet of 12mm between the 3 arms. </li>
+                    </ol>
+                    <p class = "comment">The Finished Product</p>
+                    <a href = "../photos/model/spinner.png" target="_blank"> <img src = "../photos/model/spinner.png" width = "400"/></a>
+
+            
+                    <hr/>
+                
+                    <h3> Knight Chess Piece</h3>
+                    <ol>
+                        <li> Started by importing an image of a Knight Chess piece into Fusion. </li>
+                        <a href = "../photos/model/knight.png" target="_blank"> <img src = "../photos/model/knight.png" height = "200"/></a>
+                        <a href = "../photos/model/canvas.jpg" target="_blank"> <img src = "../photos/model/canvas.jpg" height = "200"/></a>
+                        <li> I first started a sketch to model the base. I used the Line tool and Fit Point Spline tool to model one half of the base before revolving it</li>
+                        <a href = "../photos/model/base.jpg" target="_blank"> <img src = "../photos/model/base.jpg" height = "160"/></a>
+                        <a href = "../photos/model/knight_revolve.jpg" target="_blank"> <img src = "../photos/model/knight_revolve.jpg" height = "160"/></a>
+                        <li> Next, I created a sketch with the shape of the horse using the Fit Point Spline Tool. I then extrude the body of the horse by 1mm with a Symmetric direction, and the mane of the horse by 0.5mm.</li>
+                        <a href = "../photos/model/knight_sketch.jpg" target="_blank"> <img src = "../photos/model/knight_sketch.jpg" height = "160"/></a>
+                        <a href = "../photos/model/knight_extrude.jpg" target="_blank"> <img src = "../photos/model/knight_extrude.jpg" height = "160"/></a>   
+                    </ol>
+                </div>
+            </div>
+
+            <div id = "footer">
+                <p> Copyright © Emmanuel Cheng </p>
+            </div>
+        </div>
+    </body>
+</html>
