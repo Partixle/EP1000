@@ -29,8 +29,24 @@
                     <p>CAD or CADD (Computer Aided Design and Drafing) are a set of digital vector tools used to design objects on your computer and simulate and analyse them without actually building or fabricating the actual object. Once designed and tested, they can then be fabricated by sending the design into a 3D printers or computer cutting. CAD is often used in Electronic Design Automation, Architectural &amp; Building services as well as Product design &amp; manufacturing </p>
                     <p> For CAD, I used Fusion 360 which is an Integrated CAD, CAM, and CAE software. The commands of the app is similar to Autodesk Inventor which I learnt in the module Computer Aided Design. </p>
                     
-                    <h3>The Basics</h3>
-                    <p> In Fusion, to move the camera around, hold the MMB to shift the camera, and hold MMB+Shift to pan the camera. To start modeling in Fusion 360, a 2D Sketch must first be constructed on one of the 3 provided planes. </p>
+                     <h3>Interface</h3>
+                    <p> In Fusion, to move the camera around, hold the MMB to shift the camera, and hold MMB+Shift to pan the camera. </p>
+                    <a href = "../photos/cad/interface.jpg" target="_blank"><img class = "noborder" src = "../photos/cad/interface.jpg" width = "300"></a>
+                    <ol>
+                        <li><b>Application Bar:</b> The save, undo and redo function is found is this bar.</li>
+                        <li><b>Data Panel:</b> Houses all your design files that you made with Fusion 360, Allows creation of new project.</li>
+                        <li><b>Profile and Help:</b> Allows settings of Preferences. Ensure that you have the Z-axis pointing up and units of measurements is in mm</li>
+                        <li><b>Toolbar:</b> Contains essential command set in each area that you are working on</li>
+                        <li><b>Browser:</b> Lists the objects in your design. An object is made out of components, which is made out of bodies and sketches. You can control  the visibility of each part of the object. </li>
+                        <li><b>ViewCube:</b> Shows the viewing angle of the camera and the orientation of the object. You can set the camera to the Home view from here</li>
+                        <li><b>Canvas and Marking menu:</b> The work surface which houses your object. </li>
+                        <li><b>Navigation Bar and Display Settings:</b> Sets the settings for the view and camera. </li>
+                        <li><b>Timeline:</b> Shows order of operations. Allows editing and manipulation of previously made features and operations. </li>
+                    </ol>
+                    <hr/>
+                    
+                    <h3>The Basics</h3>    
+                    <p>To start modeling in Fusion 360, a 2D Sketch must first be constructed on one of the 3 provided planes. </p>
                     <a href = "../photos/cad/planes.jpg" target="_blank"> <img src = "../photos/cad/planes.jpg" width = "300"/></a>
                     <p> You then can construct a 2D view of what your object would look like, and give relevant dimensions</p>
                     <a href = "../photos/cad/sketch.jpg" target="_blank"> <img src = "../photos/cad/sketch.jpg" width = "300"/></a>
@@ -39,12 +55,14 @@
                     <p> You can also choose to Revolve instead of extruding, which requries you to select an axis to revolve the sketch around. Revolution can be Partial, based on angle (which I used with an angle of 135 degrees), or a Full 360</p>
                     <a href = "../photos/cad/revolve.jpg" target="_blank"> <img src = "../photos/cad/revolve.jpg" width = "400"/></a>
                     <hr/>
+                    
                     <h3>Lofting</h3>
                     <p>Lofting creates a closed profile using several sketches made in differet planes. </p>
                     <img src = "../photos/cad/loft_sketch.jpg" height = "250" />
                     <p>When using the loft command, select the profiles you want to use to create the 3D body. </p>
                     <img src = "../photos/cad/loft.jpg" height="250" />
                     <hr/>
+                    
                     <h3>Create</h3>
                     <p>If our model is geometric (made up of a certain shape) we can directly create the object using Box, Cylinder, Sphere, Torus, Coil and Pipe. These models can be mathematically defined, hence, easy to create using Fusion 360. We could use these and duplicate and manipulate them to our purpose. Fusion 360 provides commands for this action </p>
                     <ul>
@@ -55,6 +73,7 @@
                     </ul>
                     <p> These actions can apply to Faces, Bodies, Components or Features that were constructed by sketches as well.</p>
                     <hr/>
+                
                     <h3>Modify</h3>
                     <p>  Modification commands changes the composition of faces, bodies or components.</p>
                     <ul>
@@ -67,15 +86,19 @@
                         <li>Move/Copy: Move or copy a 3D object</li>
                     </ul>
                     <hr/>
+                    
                     <h3>Canvas</h3>
                     <p>Fusion allows importing of images in order to help create a model based on the shape in the image. This can be done by Insert > Canvas. From there, you can choose the image from your computer, and select the plane you would want to project the image. Fusion would also allow you to change the opacity of the image and the size of the image. </p>
                     <hr/>
+                    
                     <h3>Parametric Modelling</h3>
                     <p>Parametric modelling is a function in Fusion which allows you to define dimensions in the model by variables and functions. These variables are defined in the Modify > Change Parameters. In the parameters box you define the name of the parameter, the type of the parameter e.g. mm, a value (which can be changed) and a comment to identify the parameter created. To use the variables, when typing out a dimensions, you can refer the selected dimension to the variable using the variable name. The variable can also be manipulated with mathematical equations, such as the variable/2 to divide the value of the variable by 2. </p>
                     <hr/>
+                    
                     <h3>Assembly Modelling</h3>
-                    <p>You can combine bodies or components to form a new object. This allows you to create smaller parts (components) and then assemble them to form another object or component for further assemblies. Assembly modelling allows you to check your model before manufacture.</p>
-                    <p>Joints allow you to constrain your components through a degree of freedon. After specifying a joint you can check the model with the combination of components. How to start with joints Only components Ground one of the components, others move with-respect-to this anchor point One joint to rule them all, then select the movement </p>
+                    <p>You can combine bodies or components to form a new object. This allows you to create smaller parts (components) and then assemble them to form another object or component for further assemblies. Assembly modelling allows you to check your model before manufacture. In order to create a new component, right click the object in the browser, and select new component. In order to make sketches on a different component, right click the component in the browser, and select Activate Component. </p>
+                    <p>Assemble > Joint allows you to position different components relative of one another by selecting the 2 component's geometry and specify the joint alignment, offset, angle etc. </p>
+                    
                 </div>
             </div>
 
@@ -85,6 +108,3 @@
         </div>
     </body>
 </html>
-
-
-
