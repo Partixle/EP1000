@@ -111,6 +111,39 @@
                         <a href = "../photos/model/ls_sketchforlasercutting.jpg" target="_blank"><img src = "../photos/model/ls_sketchforlasercutting.jpg" width = "500"/></a>
                         <li>To show how my laptop would look like on the stand, I created a new component and used sketch, champfer and extrude to model my laptop with the same dimensions before <a href = "https://youtu.be/Sj5d7CiZkjQ" target ="_blank">animating the construction of the laptop stand</a></li>
                     </ol>
+                    
+                    <h3>Box</h3>
+                    <p class="comment">Components, Parametric Modelling. </p>
+                    <ol>
+                        <li>Start by inputting user parameters: Thickness of material, length, width and height of box, number of tabs</li>
+                        <a href = "../photos/model/box_parameters.jpg" target="_blank"><img src = "../photos/model/box_parameters.jpg" width = "500"/></a>
+                        <li>Create a new component named "Front" and create a new sketch in that component. Make the basic shape of the front by creating a rectangle, and input the dimensions of the rectangle with the parameters "Length" and "Height". Create 6 rectangles that will serve as holes to connect the front to the sides and base using tabs. The width of the rectangles is the thickness of material, and the height for the 4 side tabs is (height / (2 * numberoftabs + 1)), and the 2 bottom tabs is (length / (2 * numberoftabs + 1)). You can create 2 rectangles on one side, create a vertical construction line that splits the rectangle into half, and mirror the 2 rectangles to the other side using the construction line as a mirror line. </li>
+                        <a href = "../photos/model/box_sketch1.jpg" target="_blank"><img src = "../photos/model/box_sketch1.jpg" width = "500"/></a>
+                        <li>Extrude the front by the thickness of the material, excluding the 6 rectangles. </li>
+                        <a href = "../photos/model/box_extrude1.jpg" target="_blank"><img src = "../photos/model/box_extrude1.jpg" width = "500"/></a>
+                        <li>Create a new component "Left". Start a sketch with a rectangle with dimensions of user parameter "Width" and "Height". Create the 2 holes for the base, and you can do so by using lines instead of rectangles. (The 2nd and 4th rectangle would be the holes.) I also intend to create a hole for the lid to revolve around. Start with a rectangle that represents the lid's axis, and how it would be relative to the side of the box. The width of the rectangle is "t" and the length is "5/3 * thickness". I then create a circle around that rectangle, and another larger circle with the centre coincident to the smaller one. To constrain the position of these 3 objects, the rectangle top edge is collinear with the top of the side of the box, the larger circle circumference is coincident to the top left corner of the side of the box, and the distance of the small rectangle to the left edge of the side of the box is (5/3 * thickness) </li>
+                        <a href = "../photos/model/box_sketch2.jpg" target="_blank"><img src = "../photos/model/box_sketch2.jpg" width = "500"/></a>
+                        <li> Extrude the side of the box by thickness, excluding the hole for the lid and the 2 small rectangle. </li>
+                        <a href = "../photos/model/box_extrude2.jpg" target="_blank"><img src = "../photos/model/box_extrude2.jpg" width = "500"/></a>
+                        <li>Remove the overlapping material from the front and side by using the combine function. Select the side as the target body and the front as the tool body, operation cut and keep tools. </li>
+                        <a href = "../photos/model/box_combine.jpg" target="_blank"><img src = "../photos/model/box_combine.jpg" width = "500"/></a>
+                        <li>To mirror the left side to the right, first create a midplane that will be used as a mirror plane. Select the 2 edges of the front side to be used to construct the midplane. Create > Mirror the left side about the new midplane, Pattern type: Component, to make a new component. You can rename this mirrored component "Right" after mirroring. </li>
+                        <a href = "../photos/model/box_midplane1.jpg" target="_blank"><img src = "../photos/model/box_midplane1.jpg" height = "150"/></a>
+                        <a href = "../photos/model/box_mirror1.jpg" target="_blank"><img src = "../photos/model/box_mirror1.jpg" height = "150"/></a>
+                        <li>Repeat the previous step to create the back side of the box by making a new midplane and mirroring the front side. </li>
+                        <a href = "../photos/model/box_midplane2.jpg" target="_blank"><img src = "../photos/model/box_midplane2.jpg" height = "150"/></a>
+                        <a href = "../photos/model/box_mirror2.jpg" target="_blank"><img src = "../photos/model/box_mirror2.jpg" height = "150"/></a>
+                        <li>Remove the overlapping material from the 2 sides and the back by using the combine function. Select the left side as the target body and the back as the tool body, operation cut and keep tools. Use the combine function again for the right side</li>
+                        <a href = "../photos/model/box_combine2.jpg" target="_blank"><img src = "../photos/model/box_combine2.jpg" width = "500"/></a>
+                        <li>Create a new component "Base" and start a sketch on the bottom of one of the holes. Create a rectangle of length with user parameter "Length" and width "Width". Extrude it upwards by the parameter thickness </li>
+                        <a href = "../photos/model/box_sketch3.jpg" target="_blank"><img src = "../photos/model/box_sketch3.jpg" width = "500"/></a>
+                        <li>Remove the overlapping material from the base by using the combine function. Select the base as the target body and the front , side and back as the tool body, operation cut and keep tools. </li>
+                        <a href = "../photos/model/box_combine3.jpg" target="_blank"><img src = "../photos/model/box_combine3.jpg" width = "500"/></a>
+                        <li>Create a new component "Lid". Since the lid would be flush with the top surface of the sides of the box, you can start a sketch on one of the top surface. Create 2 rectangle, one long narrow one as the axle, and another larger one as the lid. Apply collinear constraints and dimensions similar to that when we created the hole in the side of the box for the lid. Extrude it downwards by the thickness. </li>
+                        <a href = "../photos/model/box_sketch4.jpg" target="_blank"><img src = "../photos/model/box_sketch4.jpg" width = "500"/></a>
+                        <li>For the lid to fit snugly on the front side of the box, use the combine function to remove material from the front side. Select the front as the target body and the lid as the tool body, operation cut and keep tools. </li>
+                        <a href = "../photos/model/box_combine4.jpg" target="_blank"><img src = "../photos/model/box_combine4.jpg" width = "500"/></a>
+                    </ol>
                 </div>
             </div>
 
