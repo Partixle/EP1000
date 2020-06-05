@@ -1,0 +1,52 @@
+<html>
+	<head>
+        <title> My First Webpage </title>
+        	<link rel="stylesheet" type="text/css" href="../style.css" />
+   	</head>
+
+	<body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Cura </h1>
+            </div>
+
+            <div id = "content">
+               	<div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
+                        <li> <a href = "3dprint.html"> 3D Printing</a></li>
+                        <li> <a class = "selected" href = 'cura.html'>Cura</a></li>
+                    </ul>
+                </div>
+
+				<div id = "main">
+                    <p>In order to 3D print an object, a slicer software will be required. All 3 printers in the Fablab@SP which are available can use a common slicer, Ultimaker Cura. </p>
+                    <ol>
+                        <li>First, we would convert our Fusion file into a STL file. There are 2 methods, Object Browser > Select Object > R-click > Save as STL. You then can leave the options as the default settings and click ok. 
+                            <a href = "../photos/3dprint/method1.jpg" target="_blank"><img src = "../photos/3dprint/method1.jpg" width = "500"></a>
+                        The 2nd method is Tools > Make > 3D Print. Select the Object, Preview Mesh - Yes, Refinement - Medium, Send to 3d Print Utility - No</li>
+                        <a href = "../photos/3dprint/method2.jpg" target="_blank"><img src = "../photos/3dprint/method2.jpg" width = "500"></a>
+                        <li>Launch Cura and set the 3D printer to Ultimaker 2. Open the STl file by clicking the folder on the top right hand corner, or dragging the file into the app itself. </li>
+                        <li>In the right side of the top bar, you can set the print setting. Click custom to have more print options to change. The dimension of the print is shown in the bottom left corner</li>
+                        <li>The following settings is used: Layer Height - 0.2mm, Wall Thickness - 1mm, Infill - 15%, No supports and bed adhesion. Click slice, and the program will slice the model, showing the approximate timing and mass of material needed to print</li>
+                        <a href = "../photos/3dprint/sliced.jpg" target="_blank"><img src = "../photos/3dprint/sliced.jpg" width = "500"></a>
+                        <li>To shorten the print time, you can reduce the layer height, wall thickness, infill and increase print speed from 50 mm/s.</li>
+                        <li>You can then save the file as a gcode, or connect it to the 3D printer and print the model. </li>
+                    </ol>
+				</div>
+           	</div>
+
+			<div id = "footer">
+				<p> Copyright © Emmanuel Cheng </p>
+			</div>
+		</div>
+	</body>
+</html>
