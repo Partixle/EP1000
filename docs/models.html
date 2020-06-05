@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title> My First Webpage </title>
@@ -10,7 +11,7 @@
     <body>
         <div id = "container">
             <div id = "header">
-                <h1> Computer Aided Design </h1>
+                <h1> Autodesk Fusion 360 </h1>
             </div>
 
             <div id = "content">
@@ -42,8 +43,23 @@
                         <a href = "../photos/model/nt_sketch2.jpg" target="_blank"> <img src = "../photos/model/nt_sketch2.jpg" width = "400"/></a>
                         <li>Round off the corners using the Fillet command by 2mm for the outer corner, and 1mm for the inner corner. </li>
                     </ol>
-                    <p class = "comment">The Finished Product</p>
-                    <a href = "../photos/model/Nametag.png" target="_blank"> <img src = "../photos/model/Nametag.png" width = "500"/></a>
+                    <canvas id="cv" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('cv');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','../Fusion/Nametag.stl');
+                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script>
                     <hr/>
                     <h3> Fidget Spinner</h3>
                     <p class = "comment"> Revolve, Pattern. Houses a ABEC 608 Bearing and 3 M8 stainless steel hex nuts. </p>
@@ -59,9 +75,23 @@
                         <li> Use Pattern - Circular to duplicate the arm 2 more times around an the Z-axis and combined the 3 different arms together as one body </li>
                         <li> Fillet of 12mm between the 3 arms. </li>
                     </ol>
-                    <p class = "comment">The Finished Product</p>
-                    <a href = "../photos/model/spinner.png" target="_blank"> <img src = "../photos/model/spinner.png" width = "400"/></a>
-                    <hr/>
+                    <canvas id="cv" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('cv');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','../Fusion/FidgetSpinner.stl');
+                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script>
                 
                     <h3> Knight Chess Piece</h3>
                     <p class="comment">Canvas, Fit Point Spline tool. </p>
@@ -76,6 +106,23 @@
                         <a href = "../photos/model/knight_sketch.jpg" target="_blank"> <img src = "../photos/model/knight_sketch.jpg" height = "160"/></a>
                         <a href = "../photos/model/knight_extrude.jpg" target="_blank"> <img src = "../photos/model/knight_extrude.jpg" height = "160"/></a>   
                     </ol>
+                    <canvas id="cv" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('cv');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','../Fusion/Knight.stl');
+                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script>
                     <hr/>
                     
                     <h3>Laptop Stand</h3>
@@ -112,7 +159,24 @@
                         <a href = "../photos/model/ls_sketchforlasercutting.jpg" target="_blank"><img src = "../photos/model/ls_sketchforlasercutting.jpg" width = "500"/></a>
                         <li>To show how my laptop would look like on the stand, I created a new component and used sketch, champfer and extrude to model my laptop with the same dimensions before <a href = "https://youtu.be/Sj5d7CiZkjQ" target ="_blank">animating the construction of the laptop stand</a></li>
                     </ol>
-                    
+                    <canvas id="cv" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('cv');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','../Fusion/LaptopStand.stl');
+                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script>
+                    <hr/>
                     <h3>Box</h3>
                     <p class="comment">Components, Parametric Modelling. </p>
                     <ol>
@@ -151,7 +215,7 @@
                     <script type="text/javascript">
                         var canvas = document.getElementById('cv');
                         var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','../Fusion/Box.f3d');
+                        viewer.setParameter('SceneUrl','../Fusion/Box.stl');
                         viewer.setParameter('ModelColor','#CAA618');
                         viewer.setParameter('BackgroundColor1','#E5D7BA');
                         viewer.setParameter('BackgroundColor2','#383840');
