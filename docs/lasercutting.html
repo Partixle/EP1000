@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title> My First Webpage </title>
+        	<link rel="stylesheet" type="text/css" href="../style.css" />
+   	</head>
+
+	<body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Laser Cutting </h1>
+            </div>
+
+            <div id = "content">
+               	<div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
+                        <li> <a href = "3dprint.html"> 3D Printing</a></li>
+                        <li> <a href = 'cura.html'>Cura</a></li>
+                        <li> <a class = "selected" href = "lasercutting.html">Laser Cutting</a></li>
+                    </ul>
+                </div>
+
+				<div id = "main">
+                    <h3>Introduction</h3>
+                    <p>Laser cutting is a process where material is placed on a horizontal plane and a laser is moved across the material to cut it. This laser can be focussed onto a tight spot which allows the beam to make a thin cut which is very precise. There are several parameters that a 3D printer can have depending on the material that is being cut etc. </p>
+                    
+                    <ul>
+                        <li><b>Speed:</b> The speed at which the laser moves determines the surface and depth of the cut, lower speed will result in a deeper cut and cause charring of the material. </li>
+                        <li><b>Intensity:</b>The intensity of the laser determines the depth of cut, higher intensity will result in a deeper cut. Denser material requires higher intensity..</li>
+                        <li><b>Number of Pulses:</b>Most laser are pulsed. The higher the number of pulses per second give higher intensities and prolonged exposure to the laser. Denser material requires higher frequency of pulses.</li>
+                    </ul>
+                    <p> Most lasers settings come with recommendations from the manufacturer or the Technicians and are dependent upont the material (e.g. wood, acrylic, paper), the thickness and the color/coloration of the material. Some materials cannot be cut by laser cutting because they release poisonous gas when cut. </p>
+                    <p>In CAD, we visualise our work in a 3D model, however, in order to laser cut our design, we need to lay out the design in a 2D form. We also have to take into consideration when designing the 3D model to allow it to be constructed from a 2D state after laser cutting into a 3D model. The preferred file formats required for laser cutting are: AutoCAD DXF (Data eXchange Format), PDF (Portable Document Format) and SVG (Scalable Vector Graphics). We will be using CorelDraw Graphics suite to check and finalise the cuts. You can also use Open Source software to import, check and layout your DXF files before doing a final import to CorelDraw such as LibreCAD. </p>
+                    <ol>
+                        <li>Firstly, to create a 2D DXF file, create a new sketch of surface that you want to laser cut in Fusion 360, and click finish sketch. Do this for all the different parts of the product that you want to laser cut. You can then right click the sketch in the Broswer, and save the sketch as a different file format to laser cut.</li>
+                        <a href = "../photos/lasercutting/sketch.jpg" target="_blank"><img src = "../photos/lasercutting/sketch.jpg" width = "500"/></a>
+                        <a href = "../photos/lasercutting/save.png" target="_blank"><img src = "../photos/lasercutting/save.png" width = "500"/></a>
+                        <li> In LibreCAD, open a new drawing File > New. Use File > Import > Block and select your DXF file. Keep adding the different profiles that you need to cut. </li>
+                        <li>Layout your laser cut profile using LibreCAD close to each other so that you can reuse as much material as possible and reduce travel time to reduce the time needed to finish cutting. Remember that any line/graphic drawn will be cut out by the laser cutter. </li>
+                        <a href = "../photos/lasercutting/librecad.jpg" target="_blank"><img src = "../photos/lasercutting/librecad.jpg" width = "500"/></a>
+                        <li>Check your profiles, save your work as another DXF file e.g. layout.dxf. </li>
+                        <li>You can do a single import into CorelDraw in the FabLab. Create a new CorelDraw file using the default template. </li>
+                        <li> File > Import > Select LibreCAD DXF file. Ensure that the units are Metric and the Scaling is 1:1. To cut, click "Print"</li>
+                    </ol>
+                </div>
+           	</div>
+
+			<div id = "footer">
+				<p> Copyright © Emmanuel Cheng </p>
+			</div>
+		</div>
+	</body>
+</html>
