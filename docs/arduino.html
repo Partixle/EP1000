@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title> My First Webpage </title>
+        	<link rel="stylesheet" type="text/css" href="../style.css" />
+   	</head>
+
+	<body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Laser Cutting </h1>
+            </div>
+
+            <div id = "content">
+               	<div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
+                        <li> <a href = "3dprint.html"> 3D Printing</a></li>
+                        <li> <a href = "cura.html">Cura</a></li>
+                        <li> <a href = "lasercutting.html">Laser Cutting</a></li>
+                        <li> <a class = "selected" href = "arduino.html">Arduino</a></li>
+                    </ul>
+                </div>
+
+				<div id = "main">
+                    <h3>Introduction</h3>
+                    <p>Arduino is an open-source electronics platform based on both hardware and software. The hardware consist of the Arduino UNO(a microcontroller), resistors, wires, LEDs, buttons etc whereas the software is the Arduino IDE, an application to program the electronics.
+                    <h3>Electronics</h3>
+                    <p>Electricity is the flow of electronics in a closed circuit. Voltage is the difference in electrical potential between two points, measured in Volts. Current is the rate of flow of electrical charge past a point, measured in Amps. Electrical resistance of an object is a measure of the opposition to the flow of electric current, measured in Ohms. In order for current to flow, the circuit must be closed, usually with the help of wires. In arduino, a voltage of 5V is supplied by the laptop or computer that is connected to the Arduino UNO, which is the microcontroller. There are various ports on the UNO, 5V (voltage), GND (ground) and multiple digital ports. To program LEDs and other output devices, they must be connected to a digital port which can be referenced by the program as well as the ground. You can use Tinkercad to prototype the electronics virtually with a program. </p>
+                    <h3>Programming</h3>
+                    <p>The software is the Arduino IDE (Integrated Development Environment), which is a cross-platform application (runs on Windows, MacOS and Linux) which allows you to enter the source code for your application programming. We would be using the IDE to program our electronic project. The syntax of Arduino code is very C/C++ like. </p>
+                    
+                    <p>A Sketch is a program written with the Arduino IDE. They are saved on the development systems as text files with the extension .ino/ Each sketch is created in a folder of the same name on the development system. A basic Arduino sketch in C/C++ consists of only two functions. The first is setup(), which is called only once when the sketch starts after power-up or reset and is used to initialize variables, I/O pin modes and other libraries that are used. The second is loop(), where after the setup() function ends, the loop() function is called. This function is executed repeatedly until the board is powered off. In IDE, functions and variables are case-sensitive. </p>
+                    <ol>
+                        <li><b>pinMode(PIN, INPUT/OUTPUT); :</b> Initialise the pin number if it is either a INPUT or an OUTPUT </li>
+                        <li><b>digitalWrite(PIN, HIGH); :</b> Turn on the device connected to the pin</li>
+                        <li><b>delay(x); :</b> Wait for x milliseconds </li>
+                    </ol>
+                        
+                    
+                    <h3>Task 1</h3>
+                    <p>Connect a LED with a current limiting resistor to the Arduino Uno board. Write a program to blink the LED in a variety of patterns.</p>
+                    <ol>
+                        <li>Bring up an UNO connected to a breadboard. </li>
+                        <li>Connect a red LED to the breadboard. </li>
+                        <li>Using breadboard connection, connect the anode of the LED to the digital port '13' in the UNO with a wire, and the cathode to the Ground with a resistor. </li>
+                        <li>Using the code, write out a program to initialise the pins and program the LED to light up for a second, and turn of for another second. This will make the LED flash. </li>
+                        <li>Click "Run Simulation" to start the program. </li>
+                        <a href = "../photos/arduino/task1.jpg" target="_blank"><img src = "../photos/arduino/task1.jpg" width = "600"/></a>
+                    </ol>
+                    <hr/>
+                    <h3>Task 2</h3>
+                    <p>Using the same technique, connect 3 or more LEDs of different colors to the Arduino board. Write a program to produce running lights i.e. the LEDs are lit in sequence e.g. Red -> Green -> White -> Red -> Green -> White and so on.</p>
+                    <ol>
+                        <li>Connect 2 more LED of different colour to the breadboard similarly to the red LED</li>
+                        <li>In the code, add on a few lines to turn the green and white light</li>
+                        <li>To make it convenient, we can initialise a few variables as pin numbers, and add a serial monitor to keep track how many cycles has occured</li>   
+                        <a href = "../photos/arduino/task2.jpg" target="_blank"><img src = "../photos/arduino/task2.jpg" width = "600"/></a>
+                    </ol>
+                    <h3>Task 3</h3>
+                    <p>Add a switch to the circuit in task 2. You should use a pull-up resistor of 10K if you are operating in INPUT mode. When the switch is pressed, the LEDs will light up. Pressing the switch again will turn the LEDs off. Write and test this program.</p>
+                    <ol>
+                        <li>Add a pushbutton switch, connecting one end to port 6 and the other end to ground. </li>
+                        <li>Initialise port 6 as INPUT_PULLUP</li>
+                        <li>Write a if-else statement to use the button as a condition for the LED</li>
+                        <a href = "../photos/arduino/task3.jpg" target="_blank"><img src = "../photos/arduino/task3.jpg" width = "600"/></a>
+                    </ol>
+                    <h3>Task 4</h3>
+                    <p>Use the switch in (3) to control the type of light-up and flashing of the LEDs, for example, initially, LEDs are all in the OFF state. Pressing the switch, turns on only the RED LED. Pressing the switch again, turns on only the GREEN LED. Pressing the switch again, turns on only the WHITE LED. Pressing the switch again, turns on all LEDs. Pressing the switch again, turns off all LEDs returning to the first state.</p>
+                    <a href = "../photos/arduino/task4.1.jpg" target="_blank"><img src = "../photos/arduino/task4.1.jpg" width = "600"/></a>
+                    <a href = "../photos/arduino/task4.2.jpg" target="_blank"><img src = "../photos/arduino/task4.2.jpg" width = "600"/></a>
+
+                </div>
+           	</div>
+
+			<div id = "footer">
+				<p> Copyright © Emmanuel Cheng </p>
+			</div>
+		</div>
+	</body>
+</html>
