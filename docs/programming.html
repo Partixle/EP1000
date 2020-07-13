@@ -40,15 +40,6 @@
                         <li><b>Logical Error:</b> This error is made by the programmer in developing the logic of the program, such as using imperial units instead of metric. </li>
                         <li><b>Semantic Error: </b>This error occur during improper use of program statements, such as using the function 'Break' when there is no loop to break. </li>    
                     </ul>
-                    <h3>Structured Programming</h3>
-                    <p>Structured programming is a method of writing a program and is made up of 3 main structures.</p>
-                    <ol>
-                        <li><b>Sequence: </b>Do one task at a time, one after another. </li>
-                        <li><b>Condition: </b>Create a condition, and execute a task if the condition is met. If the condition is not met, the program can either carry on, or another task can be specified to execute. </li>
-                        <li><b>Repetition: </b>Repeat a task a certain number of times, or repeat it while a condition is being met. </li>
-                    </ol>
-                    <a href = "../photos/programming/structured_programming.png" target="_blank"><img src  = "../photos/programming/structured_programming.png" width = "500"/></a>
-                    <p>Using this method, it can reduce the occurance of logical error and is easy to understand. Most programs can be writen with Structured programming. </p>
                     
                     <h3>Variables and Data types in Arduino</h3>
                     <p>Variables are storage that can be called out during a program. In order to use them, they must first be declared like so: [Data Type] [identifier] = value. The value can be fixed, calculated or from another variable. The value also doesn not have to be specified immediately, it can be assigned a value at a later part of the program. Variables only exist in the region that they are declared. Local variables are declared in a function or a block, and can only be used in there. Global variables are defined outside any function, usually at the top of the program and they exist throughout the entire program. </p>
@@ -78,10 +69,19 @@
                         <li><b>Comparison: </b> Compares 2 operands to give a logical result(true of false). '==' equality, '!=' not equal to, '&rt;' greater than, '&lt;' less than.</li>
                         <li><b>Boolean operators: </b>Compare 2 or more operations to give a logical result(true or false). &amp;&amp; AND, '||' OR, '!' logical NOT. 
                         <li><b>Bitwise operators: </b> changes the bit pattern of the operator. '&amp;' and. '|' or, '!' not/inverse, '«' shift left, '»' shift right</li>
-                    
-                    
-                    
                     </ol>
+                    <h3>Control Statements</h3>
+                    <p>Control statements provide a means of decision making. A condition is first tested. If the result is true, then the code for Task A is executed. Else, the code for Task B is executed. Control statements are provided using the 'if' and 'else' statement. The condition statement must return a boolean result. 'if' statements can be nested using more 'if', whereas else statements can be nested using 'else if' statement</p>
+                        
+                    <h3>Loops</h3>
+                    <p>Loops provide a means of performing a task or executing a block of statements repeatedly. There are different types of loops that loops function in different ways. </p>
+                    <ol>
+                        <li><b>while(...): </b> The loop starts if the condition in the bracket is true. When the block of code in the while statement is finished, the condition is checked again, and the block of code executes again if the condition is true. </li>
+                        <li><b>do ... while(...): </b>The condition is only checked after the block of code is executed once, unlike while(...) loops, where the condition is checked before. </li>
+                        <li><b>for(...): </b>Loops a certain number of times by using a initialised variable. In the bracket, a variable is specifed to be used or a new variable can be initialised, the condition for the loop to execute, and the increment of the variable after every cycle. </li>
+                    </ol>
+                    <h3>Functions</h3>
+                    <p></p>
                 </div>
             </div>
 
