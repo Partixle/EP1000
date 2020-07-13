@@ -8,7 +8,7 @@
 	<body>
         <div id = "container">
             <div id = "header">
-                <h1> Laser Cutting </h1>
+                <h1>Arduino</h1>
             </div>
 
             <div id = "content">
@@ -26,6 +26,8 @@
                         <li> <a href = "3dprint.html"> 3D Printing</a></li>
                         <li> <a href = "cura.html">Cura</a></li>
                         <li> <a href = "lasercutting.html">Laser Cutting</a></li>
+                        <li> <a href = "electronics.html">Electronics</a></li>
+                        <li> <a href = "programming.html">Programming</a></li>
                         <li> <a class = "selected" href = "arduino.html">Arduino</a></li>
                     </ul>
                 </div>
@@ -33,17 +35,13 @@
 				<div id = "main">
                     <h3>Introduction</h3>
                     <p>Arduino is an open-source electronics platform based on both hardware and software. The hardware consist of the Arduino UNO(a microcontroller), resistors, wires, LEDs, buttons etc whereas the software is the Arduino IDE, an application to program the electronics.
-                    <h3>Electronics</h3>
-                    <p>Electricity is the flow of electronics in a closed circuit. Voltage is the difference in electrical potential between two points, measured in Volts. Current is the rate of flow of electrical charge past a point, measured in Amps. Electrical resistance of an object is a measure of the opposition to the flow of electric current, measured in Ohms. In order for current to flow, the circuit must be closed, usually with the help of wires. In arduino, a voltage of 5V is supplied by the laptop or computer that is connected to the Arduino UNO, which is the microcontroller. There are various ports on the UNO, 5V (voltage), GND (ground) and multiple digital ports. To program LEDs and other output devices, they must be connected to a digital port which can be referenced by the program as well as the ground. You can use Tinkercad to prototype the electronics virtually with a program. </p>
+                    <h3>Electroncis</h3>
+                    <p>In arduino, a voltage of 5V is supplied by the laptop or computer that is connected to the Arduino UNO, which is the microcontroller. There are various ports on the UNO, 5V (voltage), GND (ground) and multiple analog and digital ports. To program LEDs and other output devices, they must be connected to a digital port which can be referenced by the program as well as the ground. You can use Tinkercad to prototype the electronics virtually with a program. </p>
+                    
                     <h3>Programming</h3>
-                    <p>The software is the Arduino IDE (Integrated Development Environment), which is a cross-platform application (runs on Windows, MacOS and Linux) which allows you to enter the source code for your application programming. We would be using the IDE to program our electronic project. The syntax of Arduino code is very C/C++ like. </p>
+                    <p>The software is the Arduino IDE (Integrated Development Environment), which is a cross-platform application (runs on Windows, MacOS and Linux) which allows you to enter the source code for your application programming. We would be using the IDE to program our electronic project. The syntax of Arduino code is very similar to C/C++, like how every program statement must end with a semicolon. </p>
                     
                     <p>A Sketch is a program written with the Arduino IDE. They are saved on the development systems as text files with the extension .ino/ Each sketch is created in a folder of the same name on the development system. A basic Arduino sketch in C/C++ consists of only two functions. The first is setup(), which is called only once when the sketch starts after power-up or reset and is used to initialize variables, I/O pin modes and other libraries that are used. The second is loop(), where after the setup() function ends, the loop() function is called. This function is executed repeatedly until the board is powered off. In IDE, functions and variables are case-sensitive. </p>
-                    <ol>
-                        <li><b>pinMode(PIN, INPUT/OUTPUT); :</b> Initialise the pin number if it is either a INPUT or an OUTPUT </li>
-                        <li><b>digitalWrite(PIN, HIGH); :</b> Turn on the device connected to the pin</li>
-                        <li><b>delay(x); :</b> Wait for x milliseconds </li>
-                    </ol>
                         
                     
                     <h3>Task 1</h3>

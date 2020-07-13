@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My First Webpage </title>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+    </head>
+
+    <body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Programming </h1>
+            </div>
+
+            <div id = "content">
+                <div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
+                        <li> <a href = "3dprint.html"> 3D Printing</a></li>
+                        <li> <a href = "cura.html">Cura</a></li>
+                        <li> <a href = "lasercutting.html">Laser Cutting</a></li>
+                        <li> <a href = "electronics.html">Electronics</a></li>
+                        <li> <a class = "selected" href = "programming.html">Programming</a></li>
+                        <li> <a href = "arduino.html">Arduino</a></li>
+                    </ul>
+                </div>
+                
+                <div id = "main">
+                    <h3>Introduction</h3>
+                    <p>A programming language is used to convey the Progammer’s thoughts into instructions for the microprocessor to understand. To translate english-like instructions to machine code, a middile-ground is required, which is done so by computer programming language. They can be understood by humans, and can also easily and accurately convert the language into binary by compiling the code for the microprocessor to understand. Such programming languages include Python and C/C++. It is important that the instructions of the programmer be conveyed accurately into the programming language as the microprocessor ONLY follows the instructions-to-the-letter by the programming language. If your code is wrong/has errors, the microprocessor reproduces these errors. There are 3 main types of error: </p>
+                    <ul>
+                        <li><b>Syntax Error: </b>This error occur when the programmer does not follow the rules of the programming language, such as missing a semi-colon. They are the most common errors and are easily caught by the compiler</li>
+                        <li><b>Logical Error:</b> This error is made by the programmer in developing the logic of the program, such as using imperial units instead of metric. </li>
+                        <li><b>Semantic Error: </b>This error occur during improper use of program statements, such as using the function 'Break' when there is no loop to break. </li>    
+                    </ul>
+                    <h3>Structured Programming</h3>
+                    <p>Structured programming is a method of writing a program and is made up of 3 main structures.</p>
+                    <ol>
+                        <li><b>Sequence: </b>Do one task at a time, one after another. </li>
+                        <li><b>Condition: </b>Create a condition, and execute a task if the condition is met. If the condition is not met, the program can either carry on, or another task can be specified to execute. </li>
+                        <li><b>Repetition: </b>Repeat a task a certain number of times, or repeat it while a condition is being met. </li>
+                    </ol>
+                    <a href = "../photos/programming/structured_programming.png" target="_blank"><img src  = "../photos/programming/structured_programming.png" width = "500"/></a>
+                    <p>Using this method, it can reduce the occurance of logical error and is easy to understand. Most programs can be writen with Structured programming. </p>
+                    
+                    <h3>Variables and Data types in Arduino</h3>
+                    <p>Variables are storage that can be called out during a program. In order to use them, they must first be declared like so: [Data Type] [identifier] = value. The value can be fixed, calculated or from another variable. The value also doesn not have to be specified immediately, it can be assigned a value at a later part of the program. Variables only exist in the region that they are declared. Local variables are declared in a function or a block, and can only be used in there. Global variables are defined outside any function, usually at the top of the program and they exist throughout the entire program. </p>
+                        
+                    <p>There are many types of data, and variables and functions have to have their data type specified.  Different data types are implemented differently and they require different amount of memory to store data. Some common data types include: </p>
+                    <ol>
+                        <li><b>bool/boolean: </b>Stores 'true' or 'false'. Uses 1 byte</li>
+                        <li><b>char: </b>Stores a character. Uses 1 byte</li>
+                        <li><b>unsigned char/byte: </b>Stores a number from 0 to 255. Uses 1 byte</li>
+                        <li><b>int: </b>Stores a integer from -32766 to +32767. Uses 2 byte</li>
+                        <li><b>unsigned int/word/short:</b>Stores a integer from 0 to +65535. Uses 2 byte</li>
+                        <li><b>long:</b>Stores a integer from -2,147,483,648 to 2,147,483,647. Uses 4 byte</li>
+                        <li><b>float/double:</b>Stores numbers with decimal point, ranging from -3.4028235E+38 to 3.4028235E+38. Uses 4 byte</li>
+                    </ol>
+                    <p>When you require a value to stay constant through-out the program and you want to keep track of it using a identifier. Declare a constant by typing const before the data type. </p>
+                    <ol>
+                        <li><b>Functions: </b>any words that end with a (), or (...) are functions. They are block of codes that can be called out for execution, which afterwards, can return a value depending on the type of function depending on the word in front of the functions. (Void returns no values, int returns an integer, string returns a string, char</li>
+                        <li><b>pinMode(PIN, INPUT/OUTPUT); :</b> Initialise the pin number if it is either a INPUT or an OUTPUT </li>
+                        <li><b>digitalWrite(PIN, HIGH); :</b> Turn on the device connected to the pin</li>
+                        <li><b>delay(x); :</b> Wait for x milliseconds before executing the next line of code</li>
+                    </ol>
+                    
+                    <h3>Operators</h3>
+                    <p>Operators are symbols that are used to perform a specific mathematical or logical operation. </p>
+                    <ol>
+                        <li><b>Arithmetic: </b>Execute a mathematical operation which gives a numerical result. '=' assign a value to an operand, '+' add, '-' subtract, '*' multiply, '/' divide. </li>
+                        <li><b>Comparison: </b> Compares 2 operands to give a logical result(true of false). '==' equality, '!=' not equal to, '&rt;' greater than, '&lt;' less than.</li>
+                        <li><b>Boolean operators: </b>Compare 2 or more operations to give a logical result(true or false). &amp;&amp; AND, '||' OR, '!' logical NOT. 
+                        <li><b>Bitwise operators: </b> changes the bit pattern of the operator. '&amp;' and. '|' or, '!' not/inverse, '«' shift left, '»' shift right</li>
+                    
+                    
+                    
+                    </ol>
+                </div>
+            </div>
+
+            <div id = "footer">
+                <p> Copyright © Emmanuel Cheng </p>
+            </div>
+        </div>
+    </body>
+</html>
