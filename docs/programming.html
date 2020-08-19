@@ -29,6 +29,8 @@
                         <li> <a href = "electronics.html">Electronics</a></li>
                         <li> <a class = "selected" href = "programming.html">Programming</a></li>
                         <li> <a href = "arduino.html">Arduino</a></li>
+                        <li> <a href = "input.html">Input Devices</a></li>
+                        <li> <a href = "output.html">Output Devices</a></li>
                         <li> <a href = "project.html">Project</a></li>
                     </ul>
                 </div>
@@ -56,12 +58,6 @@
                         <li><b>float/double:</b>Stores numbers with decimal point, ranging from -3.4028235E+38 to 3.4028235E+38. Uses 4 byte</li>
                     </ol>
                     <p>When you require a value to stay constant through-out the program and you want to keep track of it using a identifier. Declare a constant by typing const before the data type. </p>
-                    <ol>
-                        <li><b>Functions: </b>any words that end with a (), or (...) are functions. They are block of codes that can be called out for execution, which afterwards, can return a value depending on the type of function depending on the word in front of the functions. (Void returns no values, int returns an integer, string returns a string, char</li>
-                        <li><b>pinMode(PIN, INPUT/OUTPUT); :</b> Initialise the pin number if it is either a INPUT or an OUTPUT </li>
-                        <li><b>digitalWrite(PIN, HIGH); :</b> Turn on the device connected to the pin</li>
-                        <li><b>delay(x); :</b> Wait for x milliseconds before executing the next line of code</li>
-                    </ol>
                     
                     <h3>Operators</h3>
                     <p>Operators are symbols that are used to perform a specific mathematical or logical operation. </p>
@@ -82,7 +78,29 @@
                         <li><b>for(...): </b>Loops a certain number of times by using a initialised variable. In the bracket, a variable is specifed to be used or a new variable can be initialised, the condition for the loop to execute, and the increment of the variable after every cycle. </li>
                     </ol>
                     <h3>Functions</h3>
-                    <p></p>
+                    <p> User-Defined functions are block of code outside of the default function "Setup" and "Loop". A user-defined function is created to do a series of task which the user can call out for the function to be executed at any point of the program. In other words, it's a smaller program where the user can run it at any part of the program. This creates a program that is modular where the main task is made out of smaller task linked together. It also allows a part of the program to be repeated or reuse without writing it all out again. Functions are created in a certain format, usually below the loop function.</p>
+                    <p><b>Return data type</b> functionname (argument1, argument2,...){<br/>&emsp;&emsp;statement 1;<br/>&emsp;&emsp;statement 2;<br/>&emsp;&emsp;return variable;<br/>}</p>
+                    <ul>
+                        <li><b>Return data type:</b> The type of data to be returned by the function, such as int, void or double. </li>
+                        <li><b>argument1:</b> A variable or parameter from the nested function that can be used by the user-defined function</li>
+                        <li><b>functionname: </b>A unique name given to the function, to be used when calling out this function</li>
+                        <li><b>return: </b>Return a variable of the data type specified. Used at the end of the function</li>
+                    </ul>
+                    <h3>Arduino Pins</h3>
+                    <p>The arduino uno comes with 14 digital pins that can be configured to either an Input or Output pin.  To use this pins, there are a few functions required. </p>
+                    <ul>
+                        <li><b>pinMode(pinnumber, type)</b>: Used in setup(), specify the pin number as either Input or Output. The pin stays in this specified mode until another pinMode() is applied, reset occurs or powered off.</li>
+                        <li><b>digitalRead(pinnumber): </b>Used on input ports, read the value from this pin. </li>
+                        <li><b>digitalWrite(pinnumber, state)</b>Used on output ports, output the specified state the the pin number. </li>
+                    </ul>
+                    <h3>Serial Monitor</h3>
+                    <p>The Arduino comes with a Serial Communication module that is useful for debugging. It is a way of communicating from the board to you, where you can have a monitor show you the state of the Uno when it is executing a program. To use this, a few functions is required to be used. </p>
+                    <ul>
+                        <li><b>Serial.begin(bps): </b>Used in setup(), setup the serial monitor to a certain bps (typically 9600) that has to be the same as the serial monitor used on the computer. </li>
+                        <li><b>Serial.println(variable): </b>Print a line of the specified variable. The exact words can be outputted instead of a variable by adding "". </li>
+                        <li><b>Serial.print(variable):</b>Print the variable without creating a new line. </li>
+                    </ul>
+                    
                 </div>
             </div>
 

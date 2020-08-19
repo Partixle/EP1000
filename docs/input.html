@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My First Webpage </title>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+    </head>
+
+    <body>
+        <div id = "container">
+            <div id = "header">
+                <h1> Input Devices </h1>
+            </div>
+
+            <div id = "content">
+                <div id = "nav">
+                    <ul>
+                        <li> <a href = "../index.html"> Home </a> </li>
+                        <li> <a href = "tools.html"> Safety and tools </a> </li>
+                        <li> <a href = "HTML.html"> HTML </a></li>
+                        <li> <a href = "CSS.html"> CSS </a></li>
+                        <li> <a href = "development.html"> Website Development</a></li>
+                        <li> <a href = "git.html"> Using Git</a></li>
+                        <li> <a href = "gimp.html"> Computer Graphics</a></li>
+                        <li> <a href = "CAD.html"> CAD</a></li>
+                        <li> <a href = "models.html"> Fusion Models</a></li>
+                        <li> <a href = "3dprint.html"> 3D Printing</a></li>
+                        <li> <a href = "cura.html">Cura</a></li>
+                        <li> <a href = "lasercutting.html">Laser Cutting</a></li>
+                        <li> <a href = "electronics.html">Electronics</a></li>
+                        <li> <a href = "programming.html">Programming</a></li>
+                        <li> <a href = "arduino.html">Arduino</a></li>
+                        <li> <a class = "selected" href = "input.html">Input Devices</a></li>
+                        <li> <a href = "output.html">Output Devices</a></li>
+                        <li> <a href = "project.html">Project</a></li>
+                    </ul>
+                </div>
+                
+                <div id = "main">
+                    <h3>Introduction</h3>
+                    <p>Input devices are often called sensors. It it something used to detect events or changes in the environment and send these information to other electronics, usually a computer processor. In this module, since we are controlling using a Arduino Uno, the sensors can be connected to the Uno to send information into it. </p>
+                    <p>There are 3 methods in reading and obtaining information from a sensor. </p>
+                    <ul>
+                        <li><b>Always Available:</b> The data is always available to be read by the processor. One example would be a temperature sensor that is always recording the surrounding temperature. This data, which is the temperature, can always be obtained by the processor. </li>
+                        <li><b>Polling: </b>The processor have to continuously check with the sensor for information for a change in the reading or any new information which would be indicated by the sensor to the processor, such as a switch.   </li>
+                        <li><b>Triggering: </b>A trigger is a signal send by the processor to the sensor, where it will take the information and send it back to the processor after receiving the signal. E.g. Ultrasonic sensor</li>
+                    </ul>
+                    <p>Sensor data is usually analog(continuous), such as the temperature, humidity or distance. Since different quantities have different units and scaling, the sensor usually converts the data into an equivalent electrical signal or a certain voltage to be sent to the processor to convert it back to an understandable data. </p>
+                    <h3>Libraries</h3>
+                    <p>To use a certain input or output device, a library is usually required to have the code requried to write and run functions. Some libraries come with the arduino system, but there is a lot of libraries that can be downloaded to run almost every device. To add libraries that comes with the system, use the Library Manager. IDE > Sketch > Install Library > Manage Libraries. Search for the library that you need, highlight it and click Install. </p>
+                    <p>To add a external library, you have to download the .ZIP folder into your computer, usually from the internet. After doing so, add it into the arduino system with IDE > Sketch > Include Library > Add .Zip Library. Restart Arduino. To check if the library has been added and apply it to your application, use IDE > Sketch > Include Library > LibName </p>
+                    <h3>Type of sensors</h3>
+                    <ol>
+                        <li><b>Switches: </b>Switches are a electical component capable of connecting and disconnecting a conducting path of current. It can provide a digital signal of either LOW or HIGH. Many types of switches are available.<br/>
+                        Toggle Switch: A mechanical switch that keeps its state until it is pressed, where it will then change between LOW and HIGH. 
+                        <br/><a href = "../photos/input/toggle.jpg" target="_blank"><img src = "../photos/input/toggle.jpg" width = "200"/></a><br/>Pushbutton switch: A spring-loaded mechanical switch that changes state when the switch is pressed and held down. When released, the switch will return to its normal/previous state. There are 2 types of pushbutton switches, Normally closed, until it is pressed, and Normally open, until it is pressed. 
+                        <br/><a href = "../photos/input/button.jpg" target="_blank"><img src = "../photos/input/button.jpg" width = "200"/></a><br/>
+                        Slide switch: A switch that remains at its current state until it slided, where it will remain in its new state. Usually, a slide switch has 3 pins. When the switch is on the left, the middle and left pins are connected. When the switch is on the right, the middle and right pins are connected. 
+                        <br/><a href = "../photos/input/slide.jpg" target="_blank"><img src = "../photos/input/slide.jpg" width = "200"/></a><br/>
+                        Touch Capacitative switch: A switch that works based on body capacitance. When a person touches it, the body increases the capacitance of the switch and triggers the switch. </li>
+                        <br/><a href = "../photos/input/touch.jpg" target="_blank"><img src = "../photos/input/touch.jpg" width = "200"/></a><br/>
+                        <li><b>Temperature/Humidity:</b> A sensor that can measure the environment, such as a DHT-11 sensor that measures the temperature and humidity. The DHT-11 sensor has 4 pins, the 1st pin is the Vcc, which powers the sensor and the 4th pin which is the ground. The 2nd pin is the data pin, which send data to the Arduino UNO. The sensor requires the use of the DHT-11 library to program.
+                        </li>
+                        <table style="width:100%">
+                            <tr>
+                                <th><a href = "../photos/input/dht1.png" target="_blank"><img src = "../photos/input/dht1.jpg" height = "250"/></a></th>
+                                <th><a href = "../photos/input/dht.png" target="_blank"><img src = "../photos/input/dht.png" height = "250"/></a></th>
+                            </tr>
+                        </table>
+                        <li><b>Distance: </b>There are many methods of measuring distance, such as using Infrared or Ultrasonic. IR Obstacle Avoidance Sensor: Remains at a fixed state until an object is at a certain distance to it, where the state changes and remain at its new state until the object is out of the distance. It can either use Enable pulse or continuouse measurement. The distance can also be set with the potentiometer in the sensor between 2cm to 40cm. It does not measure distance, only detects if anything is in the distance. Furthermore, it can only detect surfaces that are reflective (such as a white color). 
+                        <a href = "../photos/input/ir.png" target="_blank"><img src = "../photos/input/ir.png" width = "500"/></a>
+                        Ultrasonic HC-SR04: Has a range between 2cm to 4m, and uses sonar to detect distance before returning a pulse proportional to the distance measureed. It is accurate to 3mm and measures at an angle of 15 degrees.</li>
+                        <a href = "../photos/input/ultra.jpg" target="_blank"><img src = "../photos/input/ultra.jpg" height = "250"/></a>
+                        <li><b>Motion Detection: </b>Detects motion, usually the presence of humans or animals nearby. <br/>HC-SR501 Passive Infrared Sensor: Has a range of 7 meters and covers 120 degrees in front of it. <br/>Microwave module Doplar detection RCWL-0516: A Stand-alone module using “Doplar Radar” to detect motion. It can be connected to a computer processor and cover a distance of 7 meters</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id = "footer">
+                <p> Copyright © Emmanuel Cheng </p>
+            </div>
+        </div>
+    </body>
+</html>
