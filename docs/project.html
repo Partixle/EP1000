@@ -34,8 +34,94 @@
                 </div>
                 
                 <div id = "main">
+                    <h3>Introduction</h3>
+                    <p>In the final project, we are to demonstrate the skills and techniques that we have learnt in the module. The project must have the following components: </p>
+                    <ul>
+                        <li>Documentation - Idea, Construction, How-do, Instruction manual </li>
+                        <li>CADD and/or Digital graphic components (vector/raster) </li>
+                        <li>2D cutting and engraving3D printed part.</li>
+                        <li>Embedded control using a microcontroller with input(s) and output(s)</li>
+                    </ul>
+                    <h3>The Idea</h3>
+                    <p>For this project, I decided to create a electric pencil sharpener.</p>
+                    <a href = "../photos/project/sketch.jpg" target="_blank"><img src = "../photos/project/sketch.jpg" width = "600"/></a>
+                    <p>I planned to first create a module that will contain the motor, 3d-printed gears and a sharpener. A switch is positioned such that it will be pressed when a pencil is inserted. This input would be read by the arduino to turn on the motor, which will rotate the sharpener to sharpen the pencil. This module is to be placed in a box where the pencil shavings would be stored in. To remove the shavings, a removable lid is placed at the bottom.</p>   
+                    
                     <h3>Bill of Materials</h3>
                     <a href = "../photos/project/bom.jpg" target="_blank"><img src = "../photos/project/bom.jpg" width = "600"/></a>
+                    <p>For the input siwtch to detect the pencil, I decided to go with either a micro limit switch or a IR sensor. I also wanted to test the project using a Arduino Nano as it is smaller than the Uno that is provided. I also wanted to try using a 5V DC motor controlled by a H-bridge as it is more powerful than the stepper motor provided. Lastly, the screw and nut are used to secure the stepper motor. </p>
+                    
+                    <h3>Designing with Fusion (Part 1)</h3>
+                    <p>I used Fusion 360 to design the electic sharpener. </p>
+                    <ol>
+                        <li>The first model of the electic sharpner was just the module itself. I started off designing the input gear with 18 gears and output gear with 10 gears. This is to increase the speed of the sharpener as the stepper motor is quite slow. A model of the stepper motor is also used so that the input gear would fit to the motor tightly as well as to create holes in the housing to scure the motor using screws and nuts. A sharpener holder is used to hold the sharpener and is attached to the output gear, such that it spins with the gear. Finally, a hollow tube is used to guide the pencil into the sharpener. </li>
+                        <table style="width:100%">
+                            <tr>
+                                <th><a href = "../photos/project/fusion1.jpg" target="_blank"><img src = "../photos/project/fusion1.jpg" height = "250"/></a></th>
+                                <th><a href = "../photos/project/fusion1.1.jpg" target="_blank"><img src = "../photos/project/fusion1.1.jpg" height = "250"/></a></th>
+                            </tr>
+                        </table>
+                        <li>This model came with several problems. Firstly, the gears were designed by me and the gears may not mesh properly, causing the sharpener to fail. Secondly, there wasn't a housing to store the shapener shavings. Hence, I created another model based on the first one. Firstly, I created the gears using Tools -> Add-Ins -> Spur Gear to create the gears. This plug in would generate a gear that would mesh properly. Secondly, I redesigned the housing with holes for the wire from the stepper motor to go through. I also move the lid from the bottom to the top as well as create a rectangular hole in the pencil guide to hold the micro limit switch. </li>
+                        <table style="width:100%">
+                            <tr>
+                                <th><a href = "../photos/project/fusion2.jpg" target="_blank"><img src = "../photos/project/fusion2.jpg" height = "300"/></a></th>
+                                <th><a href = "../photos/project/fusion2.1.jpg" target="_blank"><img src = "../photos/project/fusion2.1.jpg" height = "300"/></a></th>
+                            </tr>
+                        </table>
+                    </ol>
+                    <h3>Laser cutting and 3D printing (Part 1)</h3>
+                    <p>Next, I exported the gears, pencil guide and shapener holder to STL to be 3D printed. I also exported the housing to DXF to be laser cutted. </p>
+                    <table style="width:100%">
+                            <tr>
+                                <th><a href = "../photos/project/libre1.jpg" target="_blank"><img src = "../photos/project/libre1.jpg" height = "300"/></a></th>
+                                <th><a href = "../photos/project/photo1.jpg" target="_blank"><img src = "../photos/project/photo1.jpg" height = "300"/></a></th>
+                            </tr>
+                        </table>
+                    <p class = "comment"> The sharpener holder and lid is not shown</p>
+                    <p>When fitted together, I realise that the lid is not secured properly, and hence I designed a different lid made out of 3 parts such that it would fit better. </p>
+                    <table style="width:100%">
+                            <tr>
+                                <th><a href = "../photos/project/photo2.jpg" target="_blank"><img src = "../photos/project/photo2.jpg" height = "200"/></a></th>
+                                <th><a href = "../photos/project/fusionlid.jpg" target="_blank"><img src = "../photos/project/fusionlid.jpg" height = "200"/></a></th>
+                                <th><a href = "../photos/project/libre1.1.jpg" target="_blank"><img src = "../photos/project/libre1.1.jpg" height = "200"/></a></th>
+                            </tr>
+                        </table>
+                    <p class = "comment"> Left: New lid, Right: Old lid</p>
+                    <p>After testing, I realised the stepper motor is still very slow, and it also is not able to sharpen the pencil as it does not have enough torque. Hence, I decided to change to use a 5V DC motor. However, because the DC motor is bigger than the stepper motor, I had to modify the fusion model. </p>
+                    
+                    <h3>Designing with Fusion (Part 2)</h3>
+                    <p>In order to incorporate a DC motor inside the electic sharpener, I had to increase the distance between the sharpener holder and the motor. I did this by increasing the number of teeth on the gears. Furthermore, because a DC motor is much faster than a stepper motor,  I changed the number of teeth on the input gear to 10, and the number on the output gear to 24. I also modify the hole to hold the limit micro switch so that it fits better. </p>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href = "../photos/project/fusion3.jpg" target="_blank"><img src = "../photos/project/fusion3.jpg" height = "300"/></a></th>
+                            <th><a href = "../photos/project/fusion3.1.jpg" target="_blank"><img src = "../photos/project/fusion3.1.jpg" height = "300"/></a></th>
+                        </tr>
+                    </table>
+                    <h3>Laser cutting and 3D printing (Part 2)</h3>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href = "../photos/project/libre1.5.jpg" target="_blank"><img src = "../photos/project/libre1.5.jpg" height = "300"/></a></th>
+                            <th><a href = "../photos/project/photo3.jpg" target="_blank"><img src = "../photos/project/photo3.jpg" height = "300"/></a></th>
+                        </tr>
+                    </table>
+                    <h3>Electronics</h3>
+                    <p>To control the motor, I first tried using a H-bridge to control it. However, the motor spins with very little torque when using a H-bridge. Hence, I opted to use a NPN transistor to control it. Also, I used a flyback diode to protect the NPN transistor from current induced by the motor. Also, I used a 6V battery pack to power the circuit so that the sharpener does not require to be plugged in to be used since the UNO can store the program inside itself. Lastly, I attached a slide switch on the positive terminal of the battery pack so that the sharpener can be turned off when not in used. All the electronics are soldered and heat shrinked together. </p>
+                    <a href = "../photos/project/circuit.jpg" target="_blank"><img src = "../photos/project/circuit.jpg" width = "600"/></a>
+                    
+                    <h3>Designing with Fusion (Part 3)</h3>
+                    <p>Initially, the electronics were to be glued outside of the box. However, I decided to create an enclosure to protect the electronics. There is also a hinged door that is held close by friction so that the user can easily access the electronics. Furthermore, there are several holes for the wires to come out from, as well as a switch to turn the sharpener. </p>
+                    <table style="width:100%">
+                        <tr>
+                            <th><a href = "../photos/project/fusion4.jpg" target="_blank"><img src = "../photos/project/fusion4.jpg" height = "300"/></a></th>
+                            <th><a href = "../photos/project/fusion4.1.jpg" target="_blank"><img src = "../photos/project/fusion4.1.jpg" height = "300"/></a></th>
+                        </tr>
+                    </table>
+                    <h3>Electronic Box</h3>
+                    <p>After designing the electonic box, I laser cut it out before gluing it to the sharpener box and fit all the electonics in it. </p>
+                    <a href = "../photos/project/libre2.jpg" target="_blank"><img src = "../photos/project/libre2.jpg" height = "300"/></a>
+                    <p>I also added a red and green LED to show the status of the box. The red LED will turn on when the sharpener turns on, and the green LED will turn on when the motor is spinning. I soldered the LED to dupond wires and resistors before drilling 2 holes in the electonics box to glue the led in.</p>
+                    <h3>Final: </h3>
+                    
                 </div>
             </div>
 
